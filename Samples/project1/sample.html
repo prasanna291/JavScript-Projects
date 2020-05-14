@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../project1/sample.css" type="text/css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/jquery/JQuery-UI/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../node_modules/jquery/JQuery-UI/jquery-ui.min.js"></script>
+        <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="../node_modules/angular/angular-route.js"></script>
+    </head>
+    <body ng-app="myapp" ng-controller="myctrl">
+       
+        <div >
+            <ng-view></ng-view>
+        </div>
+
+        <div class="container-fluid">
+         <header>
+             
+         <nav class="navbar navbar-expand fixed-top"   >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="#content" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="content">
+              <ul class="navbar-nav mr-auto" id="nav-link">
+                  <li class="nav-item active">
+                      <a class="nav-link " href="#!sample">
+                          <i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#about" class="nav-link"><i class="fa fa-adn"></i> About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#contact" class="nav-link"> <i class="fa fa-phone"></i> Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#careers" class="nav-link"><i class="fa fa-joomla"></i> Careers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" 
+                    role="button" id="navbarDropdown" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-address-card"></i> Courses </a>
+                    <div class="dropdown-menu" data-target="#navbarDropdown" aria-labelledby="#navbarDropdown">
+                        <a href="#!html" class="dropdown-item">html</a>
+                        <a href="#!css" class="dropdown-item">CSS</a>
+                        <a href="#!javascript" class="dropdown-item">JavaScript</a>
+                        <a href="#!jquery" class="dropdown-item">JQuery</a>
+                        <a href="#!bootstrap" class="dropdown-item">Bootstap</a>
+
+                        <div class="dropdown-divider">  </div>
+
+                            <a href="#!angularjs" class="dropdown-item">Angular</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline " >
+                        <input type="search" id="search" class="form-control" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                <li class="nav-item dropright">
+                    <a href="#" class="nav-link dropdown-toggle"
+                     role="button" id="userDropdown" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-plus"></i> Users</a>
+                  <div class="dropdown-menu" id="user" data-target="#userDropdown" aria-labelledby="#userDropdown">
+                    <a href="../project1/register.html"  class="dropdown-item">Register</a>  
+                    <a href="../project1/login.html" class="dropdown-item">Login</a>
+                  </div>
+                </li>
+               
+              </ul>
+          </div>
+         </nav> 
+         <div class="img-overlay">
+             <h2>UI technologies</h2> 
+             <p>The smart way to learn UI</p>
+          <button class="btn btn-lg btn-info">   <a href="#courses" type="button" class="text-white">Courses</a> </button>
+         </div>
+        </header>
+        <br>     
+<section >
+    <aside>
+        <nav class="navbar" id="sidebar">
+            <ol class="navbar nav flex-column" >
+                <li class="nav-item active">
+                    <a href="#!html" class="nav-link text-info">Html tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!css" class="nav-link text-info">Css tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!javascript" class="nav-link text-info">Javascript tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!jquery" class="nav-link text-info">JQuery tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!bootstrap" class="nav-link text-info">Bootstrap tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!typescript" class="nav-link text-info">Typescript tutorial</a>
+                </li><li class="nav-item">
+                    <a href="#!angularjs" class="nav-link text-info">AngularJs tutorial</a>
+                </li><li class="nav-item">
+                    <a href="#" class="nav-link text-info">Angular8 tutorial</a>
+                </li>
+            </ol>
+        </nav> 
+        </aside>
+</section> 
+
+<section id="about">
+<h3>About Us</h3>
+<p>Welcome to [store name], your number one source for all things [product, ie: shoes, bags, dog treats]. We're dedicated to giving you the very best of [product], with a focus on [three characteristics, ie: dependability, customer service and uniqueness.]
+    Founded in [year] by [founder's name], [store name] has come a long way from its beginnings in a [starting location, ie: home office, toolshed, Houston, TX.]. When [store founder] first started out, his/her passion for [passion of founder, ie: helping other parents be more eco-friendly, providing the best equipment for his fellow musicians] drove him to [action, ie: do intense research, quit her day job], and gave him the impetus to turn hard work and inspiration into to a booming online store. We now serve customers all over [place, ie: the US, the world, the Austin area], and are thrilled to be a part of the [adjective, ie: quirky, eco-friendly, fair trade] wing of the [industry type, ie: fashion, baked goods, watches] industry.
+    
+    We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+    
+    Sincerely,
+    Name, [title, ie: CEO, Founder, etc.]</p>
+    <img src="/images/about.jpeg" width="1000px" height="500px">
+</section><br>
+<section id="courses">
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <h4 align="center">UI Topics</h4>
+            <tr>
+                <td>S.No</td>
+                <td>Course</td>
+                <td>Classes</td>
+                <td>Pay</td>
+                <td>Time</td>
+                <td>Availability</td>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr>
+                <td>1.</td>
+                <td>HTML5</td>
+                <td>Online Classes</td>
+                <td>&#8377; 6000/-</td>
+                <td>7:00am to 9:00am</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>--></td>
+                <td>Classroom training</td>
+                <td>&#8377;3000/-</td>
+                <td>4:00pm to 6:00pm</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>CSS3</td>
+                <td>Online Classes</td>
+                <td>&#8377; 5000/-</td>
+                <td>9:00am to 11:00am</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>--></td>
+                <td>Classroom training</td>
+                <td>&#8377;2500/-</td>
+                <td>2:00pm to 4:00pm</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>JavaScript</td>
+                <td>Online Classes</td>
+                <td>&#8377; 7000/-</td>
+                <td>9:30am to 11:30am</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>--></td>
+                <td>Classroom training</td>
+                <td>&#8377;3000/-</td>
+                <td>9:00am to 11:00am</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>JQuery</td>
+                <td>Online Classes</td>
+                <td>&#8377; 3000/-</td>
+                <td>10:00am to 12:00pm</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>--></td>
+                <td>Classroom training</td>
+                <td>&#8377;2500/-</td>
+                <td>1:00pm to 3:00pm</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Bootstrap4</td>
+                <td>Online Classes</td>
+                <td>&#8377; 6000/-</td>
+                <td>6:00pm to 8:00pm</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>--></td>
+                <td>Classroom training</td>
+                <td>&#8377;3000/-</td>
+                <td>2:00pm to 4:00pm</td>
+                <td>Yes</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</section><br>
+
+<section id="careers">
+    <h3>Our Careers</h3>
+    <div class="row">
+    <div class="col">
+    <img src="/images/career.jpeg" width="600px">
+    </div>
+    <div class="col">
+        <img src="/images/career1.jpeg" width="600px">
+
+    </div>
+    </div>
+    <p><b>Why we love it:</b> Critical Mass is a digital experience agency that is searching for people with an appreciation for design. Its careers site is sleek and clean, creating an experience that intrigues and lures in its target design-focused demographic. It clearly knows its audience!</p>
+</section>
+<section id="courseBooks">
+    <h3><b>Books Available</b></h3>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">
+                HTML Books
+            </div>
+            <div class="card-body">
+                <img src="/images/html1.jpeg" width="350px" height="300px">
+
+            </div>
+            <div class="card-footer">
+                Price:&#8377; 600/-
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                CSS Books
+            </div>
+            <div class="card-body">
+                <img src="/images/css.jpeg" width="350px" height="300px">
+
+            </div>
+            <div class="card-footer">
+                Price:&#8377; 700/-
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                JavaScript Books
+            </div>
+            <div class="card-body">
+                <img src="/images/js.png" width="350px" height="300px">
+
+            </div>
+            <div class="card-footer">
+                Price:&#8377; 600/-
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">
+                JQuery Books
+            </div>
+            <div class="card-body">
+                <img src="/images/jquery.png" width="350px" height="300px">
+
+            </div>
+            <div class="card-footer">
+                Price:&#8377; 400/-
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Bootstrap4 Books
+            </div>
+            <div class="card-body">
+                <img src="/images/boot.png" width="350px" height="300px">
+
+            </div>
+            <div class="card-footer">
+                Price:&#8377; 800/-
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                AngularJS Books
+            </div>
+            <div class="card-body">
+                <img src="/images/angularjs.jpeg" width="350px" height="300px">
+
+            </div>
+            <div class="card-footer">
+                Price:&#8377; 500/-
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-dark" id="contact">
+    <div id="copy">copyright&copy;2020 UITechnology</div>
+
+   
+    <div class="social">
+  <a href="#"><i class="fa fa-whatsapp"></i></a>
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-pinterest"></i></a>
+
+</div>      
+  <hr color="white" width="15%"> 
+
+</footer>
+<br>
+<br>
+</div>
+
+<script type="text/javascript" src="/project1/sample.js"></script>
+    </body>
+
+   
+</html>

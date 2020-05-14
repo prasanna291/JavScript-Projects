@@ -1,0 +1,151 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "tester",
+      "name": "prasanna"
+    },
+    {
+      "title": "new title",
+      "name": "new name",
+      "id": 2
+    },
+    {
+      "title": "new title",
+      "name": "new name",
+      "id": 4
+    },
+    {
+      "title": "developer",
+      "name": "ram",
+      "id": 5
+    },
+    {
+      "title": "Tester",
+      "name": "ramesh",
+      "id": 6
+    },
+    {
+      "title": "hr",
+      "name": "johnson",
+      "id": 9
+    },
+    {
+      "title": "developer",
+      "name": "johnjoe",
+      "id": 10
+    },
+    {
+      "title": "hr",
+      "name": "john",
+      "id": 11
+    },
+    {
+      "title": "HR",
+      "name": "Sravani",
+      "id": 12
+    },
+    {
+      "title": "developer",
+      "name": "leviskis",
+      "id": 13
+    },
+    {
+      "title": "employee",
+      "name": "saniane",
+      "id": 14
+    }
+  ],
+  "people": [
+    {
+      "first": "prasanna",
+      "last": "jenny",
+      "id": 1
+    },
+    {
+      "first": "prasannaKumari",
+      "last": "korukonda",
+      "id": 2
+    },
+    {
+      "first": "Keerthi",
+      "last": "Joshim",
+      "id": 3
+    },
+    {
+      "first": "lewis",
+      "last": "frosky",
+      "id": 4
+    },
+    {
+      "first": "ureena",
+      "last": "undell",
+      "id": 5
+    },
+    {
+      "first": "allen",
+      "last": "Louis",
+      "id": 6
+    },
+    {
+      "first": "jane",
+      "last": "Louis",
+      "id": 7
+    },
+    {
+      "first": "prassu",
+      "last": "boosa",
+      "id": 8
+    },
+    {
+      "first": "prassu",
+      "last": "boosa",
+      "id": 9
+    },
+    {
+      "first": "jennie",
+      "last": "lesiya",
+      "id": 10
+    },
+    {
+      "first": "pandey",
+      "last": "boosa",
+      "id": 11
+    },
+    {
+      "first": "jussey",
+      "last": "benzer",
+      "id": 12
+    },
+    {
+      "first": "Laurence",
+      "last": "Svekis",
+      "id": 13
+    },
+    {
+      "first": "prasad",
+      "last": "KK",
+      "id": 14
+    },
+    {
+      "first": "drohi",
+      "last": "bonda",
+      "id": 15
+    },
+    {
+      "first": "jay",
+      "last": "joshi",
+      "id": 16
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "content",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "prasanna"
+  }
+}

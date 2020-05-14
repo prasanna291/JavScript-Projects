@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            const myObj ={
+                "people":[
+                    {"first":"prassu",
+                    "last":"boosa",
+                    "age":24},
+
+                    {"first":"priya",
+                    "last":"umsa",
+                    "age":21},
+
+                    {"first":"ram",
+                    "last":"boosa",
+                    "age":30}
+                ],
+                "places":[
+                    { "location":"vizag"},
+                    {
+                        "location":"hyd"
+                    }
+                ]
+            };
+            for(let x =0;x<myObj.people.length;x++){
+                //console.log(myObj.people[x]);
+               // console.log(myObj.people[x].first);
+            }
+            myObj.people.forEach(function(person){
+              console.log(person.first);
+                //console.log(item);
+               // console.log(index);
+            })
+        </script>
+    </head>
+    <body>
+
+
+    </body>
+</html>

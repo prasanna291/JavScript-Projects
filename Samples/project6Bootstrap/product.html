@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="design.css">
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="top-nav-bar">
+            <!--searchbox-->
+            <div class="search-box">
+                <i class="fas fa-bars" id="menu-btn" onclick="open()"></i>
+                <i class="fas fa-times" id="close-btn" onclick="close()"></i>
+    
+                <img src="img/logo2.jpeg" width="80px" height="50px" class="logo" alt="">
+                <input type="text" class="form-control">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+            </div>
+            <!--searchbox end-->
+    
+             <!--menu bar-->
+             <div class="menu-bar">
+                 <ul>
+                     <li><a href="#"><i class="fas fa-shopping-basket"></i>   Cart</a></li>
+                     <li><a href="#"> <i class="fas fa-sign-in-alt"></i>  Sign Up</a></li>
+                     <li><a href="#"><i class="fas fa-user"></i> Log In</a></li>
+                 </ul>
+             </div>
+        </div>
+
+        <!--- single product--->
+        <section class="single-product">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div id="product" class="carousel slide" data-ride="carousel">
+                       
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/men.jpg"  alt="First slide">
+        
+                        </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/men1.jpg" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/men2.jpg" alt="Third slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/men5.jpg" alt="Third slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="img/men4.jpg" alt="Third slide">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#product" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#product" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+
+                <div class="col-md-7">
+                    <p class="new-arrival text-center">New </p>
+                    <h2>Men's T shirt V Neck-Blue color</h2>
+                    <p class="font">Product Code: IRSC2019</p>
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+
+
+                    <p class="price">&#8377; 399/-</p>
+                    <p><b class="font">Availability:</b> In Stock</p>
+                    <p><b class="font">Brand:</b> Products Company</p>
+                    <label for="num" class="font">Quantity:</label>
+                    <input type="number" id="num" value="1">
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--product description-->
+    <section class="description">
+        <div class="container">
+            <h3 align="center">Product<span class="des"> Description</span> </h3>
+            <ul class="data">
+            <li>Product comes in assorted prints. Actual colors and prints might vary for the image shown on the website</li>
+              <li>Collection: 24 x 7 ; Style no: 2714</li>  
+              <li>  80% cotton & 20% poly </li>
+               <li>Premium Combed Cotton rich fabric</li> 
+                <li>Modern fit</li>
+                <li>Ribbed crew-neck prevents sagging</li>
+               <li> Authentic Jockey logo label</li>
+               <li> To be worn as loungewear leisurewear</li>
+               <li> sportswear and innerwear</li>
+              <li>    Plus size available from size XXL onwards</li>
+            </ul>
+        </div>
+    </section>
+    <br>
+    <hr>
+
+    <!----similiar products-->
+    <div class="container">
+        <div class="title-box">
+            <h2>Similiar</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="img/wat.jpeg" alt="">
+                    <div class="overlay-right">
+                        <button class="btn btn-secondary" title="quick shop">
+                            <i class="fas fa-eye icon"></i>
+                        </button>
+                        <button class="btn btn-secondary" title="Add to wishlist">
+                            <i class="fas fa-heartbeat icon"></i>
+                        </button>
+                        <button class="btn btn-secondary" title="Add to cart">
+                            <i class="fas fa-shopping-cart icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-bottom text-center">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star-half-alt"></i>
+                 <h3>Fitness Watch</h3>
+                 <p class="price">&#8377;2500</p>
+                </div>
+            </div>
+            <!--col2-->
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="img/tv1.jpeg" alt="">
+                    <div class="overlay-right">
+                        <button class="btn btn-secondary" title="quick shop">
+                            <i class="fas fa-eye icon"></i>
+                        </button>
+                        <button class="btn btn-secondary" title="Add to wishlist">
+                            <i class="fas fa-heartbeat icon"></i>
+                        </button>
+                        <button class="btn btn-secondary" title="Add to cart">
+                            <i class="fas fa-shopping-cart icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-bottom text-center">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star-half-alt"></i>
+                 <h3>Television</h3>
+                 <p class="price">&#8377;34000</p>
+                </div>
+            </div>
+<!--col3-->
+<div class="col-md-3">
+<div class="product-top">
+    <img src="img/lap1.jpeg" alt="">
+    <div class="overlay-right">
+        <button class="btn btn-secondary" title="quick shop">
+            <i class="fas fa-eye icon"></i>
+        </button>
+        <button class="btn btn-secondary" title="Add to wishlist">
+            <i class="fas fa-heartbeat icon"></i>
+        </button>
+        <button class="btn btn-secondary" title="Add to cart">
+            <i class="fas fa-shopping-cart icon"></i>
+        </button>
+    </div>
+</div>
+<div class="product-bottom text-center">
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star-half-alt"></i>
+ <h3>Laptop</h3>
+ <p class="price">&#8377;75000</p>
+</div>
+</div>
+<!--col4-->
+<div class="col-md-3">
+<div class="product-top">
+    <img src="img/head1.jpeg" alt="">
+    <div class="overlay-right">
+        <button class="btn btn-secondary" title="quick shop">
+            <i class="fas fa-eye icon"></i>
+        </button>
+        <button class="btn btn-secondary" title="Add to wishlist">
+            <i class="fas fa-heartbeat icon"></i>
+        </button>
+        <button class="btn btn-secondary" title="Add to cart">
+            <i class="fas fa-shopping-cart icon"></i>
+        </button>
+    </div>
+</div>
+<div class="product-bottom text-center">
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+   <i class="fas fa-star"></i>
+ <h3>macro Headset</h3>
+ <p class="price">&#8377;4000</p>
+</div>
+</div>
+
+</div>
+        </div>
+
+    
+<!--footer-->
+        <section class="footer">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h1>Useful Links</h1>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Use</p>
+                        <p>Return Policy</p>
+                        <p>Discount Coupons</p>
+                    </div>
+    
+                    <div class="col-md-3">
+                        <h1>Company</h1>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Career</p>
+                        <p> Affiliate </p>
+                    </div>
+    
+                    <div class="col-md-3">
+                        <h1>Follow Us On</h1>
+                        <p ><i class="fa fa-facebook-f" id="icon"   ></i>Facebook</p>
+                        <p><i class="fas fa-youtube"></i>Youtube</p>
+                        <p><i class="fas fa-linkedin"></i>Linked In</p>
+                        <p><i class="fas fa-twitter"></i>Twitter</p>
+                    </div>
+    
+                    <div class="col-md-3 footer-img">
+                        <h1>Download App</h1>
+                        <img src="img/goo.png" width="300px">
+                    </div>
+    
+                </div>
+                <hr>
+                <p class="copyright">Made with <i class="fas fa-heart-broken"></i> Products &copy; 2020 </p>
+            </div>
+        </section>
+</body>
+</html>

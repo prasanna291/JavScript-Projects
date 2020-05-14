@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script>
+            const myObj ={
+                "people":[
+                    {"first":"prassu",
+                    "last":"boosa",
+                    "age":24},
+
+                    {"first":"priya",
+                    "last":"umsa",
+                    "age":21},
+
+                    {"first":"ram",
+                    "last":"boosa",
+                    "age":30}
+                ],
+                "places":[
+                    { "location":"vizag"},
+                    {
+                        "location":"hyd"
+                    }
+                ]
+            };
+            console.log(myObj.people);
+
+            for(let prop in myObj.people){
+               let temp=myObj.people[prop];
+                console.log(temp.first+''+temp.last);
+            }
+
+         const myObj2=myObj.people.map(function(key,index){
+  
+              console.log(key,index);
+              return key.first + ' ' +key.last;          
+            })
+            console.log(myObj2)
+        </script>
+       
+    </head>
+    <body>
+
+    </body>
+        </html>

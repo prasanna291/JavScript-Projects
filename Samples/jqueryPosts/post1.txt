@@ -1,0 +1,2 @@
+This is panel 2 content 2. You can also include images like this: 
+<img src="">

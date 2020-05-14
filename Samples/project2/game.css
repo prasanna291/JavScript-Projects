@@ -1,0 +1,41 @@
+body{
+    background-color: #4d91e2;
+}
+#wrap{
+    width: 750px;
+    height: 350px;
+    background-color: yellow;
+    margin-top: 120px;
+    margin-left: 280px;
+}
+
+table{
+    width: 400px;
+    height: 300px;
+    text-align: center;
+}
+#number1{
+   margin-left: 30px;
+    font-size: 45px;
+    font-weight: bold;
+    border: 5px solid green;
+    padding: 50px;
+}
+#number2{
+    font-size: 45px;
+    font-weight: bold;
+    border: 5px solid blue;
+    padding: 50px;
+}
+#plus{
+    font-size: 45px;
+    font-weight: bold;
+}
+#equal{
+    font-size: 45px;
+    font-weight: bold;
+}
+#input{
+    padding: 10px;
+    border: 2px solid darkcyan;
+}

@@ -1,0 +1,64 @@
+.container-fluid{
+    margin: 10px;
+}
+nav{
+    margin-top: 10px;
+}
+#sidebar{
+    border: 2px solid whitesmoke;
+    width: 250px;
+    height: 400px;
+    padding: 20px;
+    margin-top: -5px;
+}
+header{
+    padding: 20px;
+    background-image: url("/images/water2.jpeg");
+    height: 500px;
+    background-size: cover;
+}
+.img-overlay{
+    color: white;
+    margin: 200px;
+}
+#about{
+    margin-left:300px ;
+    margin-top: -400px;
+    padding: 10px;
+}
+.nav-link{
+    color:lightblue;
+}
+.nav-link:hover{
+    color: orange;
+}
+footer{
+    height: 100px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+#copy{
+   text-align: left;
+   margin-top: 50px;
+}
+
+.social{
+    margin-left:340px;
+    margin-bottom: -22px;
+    font-size: 20px;
+    margin-top: -25px;
+
+}
+.form-inline{
+    margin-left: 300px;
+}
+#search{
+    width: 300px;
+}
+#user{
+    margin-top: 30px;
+    margin-left: -30px;
+}
+

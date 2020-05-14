@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Ajax Get, Post, JSON Example</title>
+
+    <script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            //When click get button.
+            $("#getButton").click(function () {
+
+                var url = 'http://localhost:8888/login';
+
+                // Send get request use jquery ajax.
+                $.get(url, function (data) {
+                   alert(data);
+                });
+            });
+
+            // Click this button to send get request with parameter.
+            $("#getSendParamButton").click(function () {
+
+                var url = 'http://localhost:8888/login';
+
+                var params = {user_name:'jerry', password:'666666'};
+
+                $.get(url, params, function (data) {
+                    alert(data);
+                });
+
+            });
+
+            // Click this button to send post request with data.
+            $("#postButton").click(function () {
+
+                var url = 'http://localhost:8888/login';
+
+                var postData = {user_name:'jerry', password:'666666'};
+
+                // jQuery .post method is used to send post request.
+                $.post(url, postData, function (data, status) {
+                    alert("Ajax post status is " + status);
+                    alert(data);
+                });
+
+            });
+
+            // Click this button to send http get request and return a JSON object.
+            $("#jsonButton").click(function () {
+
+                var url = 'http://localhost:8888/login';
+
+                var postData = {user_name:'jerry', password:'888888'};
+
+                // .getJSON method is used to send get request which return a JSON data.
+                $.getJSON(url, postData, function (data) {
+
+                    var content = "User Name : ";
+
+                    content += data.userName;
+
+                    content += "<br/>Password : ";
+
+                    content += data.password;
+
+                    content += "<br/>Request Method : ";
+
+                    content += data.reqMethod;
+
+                    content += "<br/>Message : ";
+
+                    content += data.message;
+
+                    // Display the string in a div html tag.
+                    $("#jsonData").html(content);
+
+                });
+
+            });
+
+            /* Click this button to invoke fundamental jQuery .ajax method.
+               All above methods are based on this method. */
+            $("#ajaxButton").click(function () {
+
+                var url = 'http://localhost:8888/login';
+
+                var queryString = "user_name=jerry&password=666666";
+
+                $.ajax({
+                    type:"GET",
+                    url:url,
+                    data:queryString,
+                    async:false,
+                    success: function (data) {
+                        alert(data);
+                    }
+                });
+
+            });
+
+        });
+
+    </script>
+
+    <style type="text/css">
+
+        .center{
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="center">
+
+    <button id="getButton">jQuery .get method</button>
+
+    <button id="getSendParamButton">jQuery .get with parameter</button>
+
+    <button id="postButton">jQuery .post method</button>
+
+    <button id="jsonButton">jQuery .getJSON method</button>
+
+    <button id="ajaxButton">jQuery .ajax method</button>
+
+    <div id="jsonData" style="display: block;margin-top: 30px"></div>
+
+</div>
+</body>
+</html>

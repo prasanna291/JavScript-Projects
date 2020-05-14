@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping site </title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/JQuery-UI/jquery-ui.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <!--navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+            <a href="#" class="navbar-brand"><img src="images/shoplogo.jpg"  width="60px" height="50px"></a>
+            <div class=" input-group search " >
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+
+                </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            </div>
+            <div class="collapse navbar-collapse" id="mynav"> 
+                <ul class="navbar-nav text-capitalize d-flex mx-auto">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#store" class="nav-link">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle"
+                         role="button" id="userDropdown" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-product-hunt"></i> Products</a>
+                      <div class="dropdown-menu" id="user" data-target="#userDropdown" aria-labelledby="#userDropdown">
+                        <a href="shirts.html"  class="dropdown-item"> shirts & T-shirts</a>  
+                        <a href="jeans.html" class="dropdown-item">Jeans</a>
+                        <a href="casuals.html" class="dropdown-item">Casuals</a>
+                        <a href="women.html" class="dropdown-item">Women Collections</a>
+                        <a href="jewellery.html" class="dropdown-item">Jewellery</a>
+                        <a href="cosmetics.html" class="dropdown-item">Cosmetics</a>
+                        <a href="kids.html" class="dropdown-item">Kids Wear</a>
+                        <a href="watches.html" class="dropdown-item">Watches</a>
+                        <a href="shoes.html" class="dropdown-item">Shoes</a>
+
+
+                      </div>
+                    </li>
+                    <li class="symbol">
+                        <a href="#" class="cart-info" type="button" onclick="cart()" ><i class="fas fa-shopping-cart "></i></a>
+                    </li>
+                </ul>
+            </div> 
+        </nav>
+<!----side navbar------>
+       
+        </div>
+
+          <!------side nav bar-->
+
+        <!--carousels-->
+        <section class="carousel">
+
+
+          <div id="carousels" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousels" data-slide-to="0" class="active"></li>
+                <li data-target="#carousels" data-slide-to="1"></li>
+                <li data-target="#carousels" data-slide-to="2"></li>
+                <li data-target="#carousels" data-slide-to="3"></li>
+                <li data-target="#carousels" data-slide-to="4"></li>
+  
+              </ol>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img class="d-block w-100" src="images/shop3.jpeg" height="600px" width="1024px" alt="Second slide">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h1 class="text-capitalize">welcome to <strong class="banner-title ">Women logs</strong></h1>
+                          <a href="#store" class="btn btn-outline-light banner-link btn-log text-uppercase  my-2">explore</a>
+                      </div> 
+                  </div>
+                <div class="carousel-item ">
+                  <img class="d-block w-100" src="images/mak.jpeg" height="600px" width="1024px" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h1 class="text-capitalize">welcome to <strong class="banner-title ">My Shop</strong></h1>
+                      <a href="#store" class="btn btn-outline-light btn-shop banner-link text-uppercase  my-2">explore</a>
+                  </div>
+  
+              </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/cos.jpeg" height="600px" width="1024px" alt="Second slide">
+              
+                  <div class="carousel-caption d-none d-md-block">
+                      <h1 class="text-capitalize">Our <strong class="banner-title ">Cosmetics</strong></h1>
+                      <a href="#store" class="btn btn-outline-light banner-link btn-cos text-uppercase  my-2">explore</a>
+                  </div>
+              </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/shop.jpeg" height="600px" width="1024px" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/jewe.jpeg" height="600px" width="1024px" alt="Second slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carousels" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousels" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </section><hr>
+        <!--products-->
+        <section id="products" class="products">
+          <div class="container">
+            <h2 align="center">Summer<span style="color: teal;" > sale</span></h2>
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/casu.jpg" class="store-img" alt=""> 
+              </div>               
+
+              <div class="col-md-4">
+                <img src="images/jew1.jpeg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <a href="shirts.html"><img src="images/shirt2.jpg" class="store-img" alt=""></a>
+              </div>
+            </div><br><br>
+            <!--row 2-->
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/heel.jpeg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/watch.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/kid.jpg" class="store-img" alt="">
+              </div>
+            </div>
+          </div>
+
+        </section><br><br><hr>
+        <!--store page-->
+        <section id="store">
+          <div class="container store">
+            <h1 align="center">Our <span style="color: tomato;">  Store</span> </h1>
+           <div id="shirts">
+            <h3><u>Shirts</u></h3>
+
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/shirt1.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/shirt3.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+               <img src="images/shirt4.jpg" class="store-img" alt="">
+              </div>
+            </div><br>
+            <div class="more text-center">
+              <a href="shirts.html">see more?</a>  
+            </div>
+            </div><hr><br>
+            <!--row2 t-shirts-->
+            <div id="t-shirts">
+
+            <h3 ><u>T-Shirts</u></h3>
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/t-shirt.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/t-shirt1.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/tshirt2.jpg" class="store-img" alt="">
+              </div>
+              </div><br>
+              <div class="more text-center">
+                <a href="shirts.html">see more?</a>  
+              </div>
+            </div><hr><br>
+
+            <!--row3 women collections-->
+
+         <div id="women">
+
+            <h3><u>Women Collections</u></h3>
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/women.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/women1.jpg" class="store-img" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="images/women2.jpg" class="store-img" alt="">
+              </div>
+              </div><br>
+              <div class="more text-center">
+                <a href="women.html">see more?</a>  
+              </div>
+            </div><hr><br>
+
+            <!--cosmetics-->
+            <div id="cosmetics">
+
+              <h3><u>Women Cosmetics</u></h3>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/kajal.jpg" class="store-img" alt="">
+                </div>
+                <div class="col-md-4">
+                  <img src="images/lipstick.jpg" class="store-img" alt="">
+                </div>
+                <div class="col-md-4">
+                  <img src="images/cream.jpg" class="store-img" alt="">
+                </div>
+                </div><br>
+                <div class="more text-center">
+                  <a href="cosmetics.html">see more?</a>  
+                </div>
+              </div><hr><br>
+         
+              <!--kidswear-->
+
+              <div id="kids">
+
+                <h3><u>Kids Wear</u></h3>
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="images/kid1.jpg" class="store-img" alt="">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="images/kid2.jpg" class="store-img" alt="">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="images/kid3.jpg" class="store-img" alt="">
+                  </div>
+                  </div><br>
+                  <div class="more text-center">
+                    <a href="kids.html">see more?</a>  
+                  </div>
+                </div><hr><br>
+
+                <!--Jewellery-->
+
+                <div id="Jewellery">
+
+                  <h3 ><u>Jewellery</u></h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="images/jew1.jpeg" class="store-img" alt="">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="images/jew2.jpeg" class="store-img" alt="">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="images/jew3.jpeg" class="store-img" alt="">
+                    </div>
+                    </div><br>
+                    <div class="more text-center">
+                      <a href="jewellery.html">see more?</a>  
+                    </div>
+                  </div><hr><br>
+
+                  <!--Watches-->
+
+                  <div id="watches">
+
+                    <h3 ><u>Watches</u></h3>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="images/watch1.jpg" class="store-img" alt="">
+                      </div>
+                      <div class="col-md-4">
+                        <img src="images/watch2.jpg" class="store-img" alt="">
+                      </div>
+                      <div class="col-md-4">
+                        <img src="images/watch3.jpg" class="store-img" alt="">
+                      </div>
+                      </div><br>
+                      <div class="more text-center">
+                        <a href="watches.html">see more?</a>  
+                      </div>
+                    </div><hr><br>
+          </div>
+        </section>
+        <div class="back-to-top text-center">
+          <a href="#" id="back2Top" title="Back to top" class="btn btn-outline-danger scrollToTop" type="button">Back To Top</a>
+
+        </div>
+
+        <!--footer--><br><br><hr>
+        <section class="footer bg-dark" id="contact">
+          <div class="container text-center">
+              <div class="row">
+                  <div class="col-md-3">
+                      <h4>Useful Links</h4>
+                      <p>Privacy Policy</p>
+                      <p>Terms of Use</p>
+                      <p>Return Policy</p>
+                      <p>Discount Coupons</p>
+                  </div>
+  
+                  <div class="col-md-3">
+                      <h4>Company</h4>
+                      <p>About Us</p>
+                      <p>Contact Us</p>
+                      <p>Career</p>
+                      <p> Affiliate </p>
+                  </div>
+  
+                  <div class="col-md-3" id="social">
+                      <h4>Follow Us On</h4>
+                      <p class="icon" ><i class="fa fa-facebook-f" ></i>  Facebook</p>
+                      <p  class="icon"><i class="fa fa-youtube-play"></i>  Youtube</p>
+                      <p class="icon"><i class="fa fa-linkedin"></i>  Linked In</p>
+                      <p class="icon"><i class="fa fa-twitter"></i>  Twitter</p>
+                  </div>
+  
+                  <div class="col-md-3 footer-img">
+                      <h4>Download App</h4>
+                      <img src="images/gogle.png" width="200px">
+                  </div>
+  
+              </div>
+              <hr>
+              <p class="copyright">Made with <i class="fas fa-heart-broken"></i> My Shop &copy; 2020 </p>
+          </div>
+      </section>
+
+      <!-- modal-->
+      <div class="cart">
+
+        <div class="cart-heading">
+          <div class="row">
+            <div class="col">
+                <p>name</p>
+            </div>
+            <div class="col">
+              <p>price </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+      
+      <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            form {
+                border: 2px solid darkcyan;
+                width: 300px;
+                padding: 20px;
+                margin: 20px;
+            }
+            .ng-invalid {
+                box-shadow: 0px 2px 5px red;
+            }
+            .ng-valid {
+                box-shadow: 0px 2px 5px green;
+            }
+        </style>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script>
+          var app=angular.module("DemoApp",[]);
+          app.controller("HomeController", function($scope){
+              $scope.lstCity = '';
+              $scope.isCityinValid=false;
+              $scope.VerifyCity =function(){
+                 if($scope.lstCity=="nocity") {
+                     $scope.isCityinValid=true;
+                 } else {
+                     $scope.isCityinValid=false;
+                 }
+              }
+    
+          })
+        </script>
+    </head>
+    <body ng-app="DemoApp" ng-controller="HomeController">
+        <div class="container">
+            <form novalidate name="frmRegister">
+                <h2>Register User</h2>
+                <div class="form-group">
+                    <label>User Name</label>
+                    <div>
+                        <input type="text" name="txtName" ng-model="txtName" class="form-control" required minlength="4" ng-maxlength="10">
+                        <div class="text-danger" ng-if="frmRegister.txtName.$touched">
+                            <span ng-if="frmRegister.txtName.$error.required">Name Required</span>
+                            <span ng-if="frmRegister.txtName.$error.minlength">Name too short..</span>
+                            <span ng-if="frmRegister.txtName.$error.maxlength">Name too long..</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <div>
+                        <input type="email" name="txtEmail" ng-model="txtEmail" required class="form-control">
+                        <div class="text-danger" ng-if="frmRegister.txtEmail.$touched">
+                            <span ng-if="frmRegister.txtEmail.$error.required">Email Required</span>
+                            <span ng-if="frmRegister.txtEmail.$error.email">Invalid Email</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div>
+                        <input type="password" class="form-control" name="txtPassword" ng-model="txtPassword" required pattern="(?=.*[A-Z])\w{4,15}" placeholder="Atleast 1 Uppercase letter with 4-15 chars">
+                        <div class="text-danger" ng-if="frmRegister.txtPassword.$touched">
+                            <span ng-if="frmRegister.txtPassword.$error.required">Password is mandatory</span>
+                            <span ng-if="frmRegister.txtPassword.$error.pattern">Please enter 1 Uppercase letter with 4 to 15 letters</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <div>
+                        <input type="text" name="txtMobile" ng-model="txtMobile" required pattern="\+91[0-9]{10}" class="form-control">
+                        <div class="text-danger" ng-if="frmRegister.txtMobile.$touched">
+                            <span ng-if="frmRegister.txtMobile.$error.required">Mobile Required</span>
+                            <span ng-if="frmRegister.txtMobile.$error.pattern">Invalid Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Choose City</label>
+                    <div>
+                        <select ng-change="VerifyCity()" class="form-control" ng-model="lstCity" name="lstCity">
+                            <option value="nocity">Select City</option>
+                            <option value="Hyd">Hyd</option>
+                            <option value="Delhi">Delhi</option>
+                        </select>
+                        <span ng-if="isCityinValid" class="text-danger">Please Select a City</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-block btn-primary"
+                    data-toggle="modal"
+                    data-target="#modal1"
+                     ng-disabled="frmRegister.$invalid || isCityinValid">Register</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal" id="modal1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">Best deals of today
+                    <a class="btn btn-outline-danger" type="button" data-dismiss="modal">&times;</a>
+                </div>
+                <div class="modal-body">Best Discounts for today only.Don't miss it!</div>
+                <div class="modal-footer">
+                    <button type="button"  class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

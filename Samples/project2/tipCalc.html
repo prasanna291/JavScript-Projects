@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tip Calculator
+        </title>
+        <link rel="stylesheet" href="tipCalc.css" type="text/css">
+       <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    
+    </head>
+    <body>
+        <h1><span id="perc">Tip</span>Calculator</h1>
+        <form id="calculator">
+            <p>Bill Amount:<input id="amount"></p>
+            <p>Percentage Tip <input id="percentage"></p>
+            <p>Tip Amount: <input id="tip" disabled="disabled"></p>
+            <p>Total:<input id="total" disabled="disabled"></p>
+            <p><input type="submit" id="addup" value="Calculate"></p>
+        </form>
+
+        <script src="tipCalc.js" type="text/javascript"></script>
+
+    </body>
+</html>

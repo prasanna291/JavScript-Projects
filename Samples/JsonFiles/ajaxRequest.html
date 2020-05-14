@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+    <body>
+      <div class="output"></div>
+      <div class="output2"></div>
+
+
+
+      <script>
+
+        const output=document.querySelector('.output');
+        const output2=document.querySelector('.output2');
+
+       var xhr=new XMLHttpRequest();
+
+       xhr.onreadystatechange=function(){
+          // console.log(xhr);
+           if(xhr.readyState===4 && xhr.status===200){
+               //console.log(xhr.responseText);
+               let temp=JSON.parse(xhr.responseText);
+               console.log(temp);
+
+               for(let x=0 ; x<temp.results.length;x++){
+                   console.log(temp.results[x]);
+
+                   let person=temp.results[x];
+                   output.innerHTML +=`${person.name.first}
+                         ${person.name.last} <img src="${person.picture.thumbnail}"><br><br>`;
+               }
+              // output1.textContent=`${temp.posts}`;
+              // output2.textContent=`${ temp.comments}`;
+           }
+       }
+         xhr.onprogress=function(){
+             console.log('loading');
+         }
+
+         xhr.onload=function(){
+             console.log('done');
+         }
+
+
+
+       xhr.open('get',"https://randomuser.me/api/?results=10");
+       xhr.send();
+     </script>
+    </body>
+</html>

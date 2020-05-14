@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="/node_modules/jquery/JQuery-UI/jquery-ui.css">
+        <script src="/node_modules/jquery/JQuery-UI/jquery-ui.js"></script>
+     
+        <style>
+            .ui-accordion .ui-accordion-header{
+                display: block;
+	     cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+
+	min-height: 0; /* support: IE7 */
+	font-size: 100%;
+    border:1px solid #FDF8E4;
+    background:#846733;
+    color:#fff;
+            }
+        </style>
+    <script>
+              $(document).ready(function(){
+                  $('#accordion_post').accordion({
+                      collapsible:true
+                  });
+
+                  $.ajax("/post1.txt",function(ajaxresult){
+                      $('#pan1').append(ajaxresult);
+                  });
+
+                  $.ajax('/post2.txt',function(ajaxresult){
+                      $('#pan2').append(ajaxresult);
+                  });
+              });   
+    </script>
+    </head>
+    <body>
+        <div id="accordion_post">
+            <h3>Post Panel 1</h3>
+            <p id="pan1">
+
+            </p>
+            <h3>post panel2</h3>
+            <p id="pan2"></p>
+
+            <h3>Post panel 3</h3>
+            <div>
+                <p id="pan3">
+                    Panel three of accordion.You may use different Html elements here.For Example:
+
+                    <ul>
+                        <li>You may create Html lists</li>
+                        <li>
+                            List Item2
+                        </li>
+                        <li>List item3</li>
+                    </ul>
+
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

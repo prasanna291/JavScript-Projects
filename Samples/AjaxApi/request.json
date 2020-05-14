@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "prasanna",
+      "data": "Using JS instead of a JSON file, you can create data programmatically "
+    },
+    {
+      "name": "jane",
+      "data": "There are many ways to set up SSL in development. One simple way is to use hotel ",
+      "id": 2
+    },
+    {
+      "name": "john",
+      "data": "The server sent this response to direct the client to get the requested resource at another URI with a GET request",
+      "id": 3
+    },
+    {
+      "name": "frosky",
+      "data": "This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification",
+      "id": 4
+    },
+    {
+      "name": "allen",
+      "data": "This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification",
+      "id": 5
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "img": "img/hyd.png",
+      "city": "hyderabad"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+
+:root {
+    --mainPink: #ef7998;
+    --mainYellow: rgb(249, 228, 148);
+    --mainWhite: #fff;
+    --mainBlack: #000;
+    --yellowTrans: rgba(249, 228, 148, 0.5);
+    --mainGrey: rgb(238, 238, 238);
+  }
+body{
+    font-family:"kaushan script",cursive;
+    background: var(--mainWhite);
+    color: var(--mainPink);
+
+}
+.nav-toggler{
+    outline: none!important;
+}
+.toggler-icon{
+    font-size: 2.5em;
+    color: var(--mainPink);
+}
+.nav-link{
+    color: var(--mainPink);
+    font-size: 1.5em;
+    margin: 10px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+
+}
+#nav{
+    margin-left: 300px;
+}
+.phone{
+    margin-left: 300px;
+    color: var(--mainPink);
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.cart {
+    position: absolute;
+    min-height: 10rem;
+    background: var(--mainWhite);
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    width: 0;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-right: 20px ;
+  }
+  .show-cart {
+    width: 20rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+  }
+  .cart-item {
+    transition: all 2s ease-in-out;
+  }
+  
+  /* end of cart */
+  /* cart item */
+  .cart-item-remove {
+    color: var(--mainPink);
+    transition: all 1s ease-in-out;
+  }
+  .cart-item-remove:hover {
+    transform: scale(1.1);
+    color: var(--mainBlack);
+  }
+  #cart-item-price {
+    font-size: 0.8rem;
+  }
+  .btn-pink {
+    color: var(--mainPink) !important;
+    border-color: var(--mainPink) !important;
+  }
+  .btn-black {
+    color: var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+  }
+  .btn-black:hover {
+    color: var(--mainPink) !important;
+    background: var(--mainBlack) !important;
+  }
+  .btn-pink:hover {
+    background: var(--mainPink) !important;
+    color: var(--mainBlack) !important;
+  }
+#about{
+    margin: 20px;
+    padding: 20px;
+}
+#data{
+    margin: 10px;
+    padding: 20px;
+    word-spacing: 10px;
+}
+#img{
+    border: 0.5em solid yellow;
+}
+.btn{
+    margin: 20px;
+    padding: 10px;
+}
+.btn:hover{
+    color: var(--mainPink);
+}
+#search{
+    width: 500px;
+    margin-left: 400px;
+}
+#search-icon{
+    color: var(--mainPink);
+
+}
+#cakes{
+    margin-top: 30px;
+    padding: 20px;
+
+}
+.img-container{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.store-img{
+    transition: all 1s ease-in-out;
+}
+.img-container:hover.store-img{
+    transform: scale(1.2);
+}
+.store-item-icon{
+    position: absolute;
+    padding: 0.75rem;
+    bottom: 0;
+    right: 0;
+    background: var(--mainYellow);
+    border-top-left-radius: 1rem;
+    transition: all 1s ease-in-out;
+    transform: translate(100%,100%);
+}
+.img-container:hover .store-item-icon {
+    transform: translate(0, 0);
+  }
+  .store-item-icon:hover {
+    color: var(--mainWhite);
+  }
+  .store-item-value {
+    color: --mainYellow;
+  }
+  #cupcakes{
+      margin-top: 30px;
+      margin-bottom: 20px;
+  }
+  #doughnuts{
+      margin-top: 30px;
+      margin-bottom: 20px;
+
+  }
+  #sweets{
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+  
+  }

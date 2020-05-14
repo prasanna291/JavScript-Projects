@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/node_modules/angular/angular.min.js"></script>
+        <style>
+            .container-fluid{
+                background-image: url("../images/bg3.jpeg");
+                background-size: cover;
+            }
+            form{
+                width: 500px;
+                margin: 20px;
+                padding: 20px;
+                margin-left: 450px;
+            }
+            .input-group.form-control{
+               line-height: 30px;
+            }
+            #regis{
+                text-align: left;
+                font-size: 20px;
+                margin-bottom: -50px;
+            }
+            #button{
+                text-align: right;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            var app=angular.module('myapp',[]);
+            app.controller("loginctrl",function($scope){
+
+            })
+        </script>
+    </head>
+    <body ng-app="myapp" ng-controller="loginctrl">
+       <div class="container-fluid">
+           <form novalidate name="form1">
+              
+               <h2 align="center" class="text-danger">Login</h2><br><br>
+<div class="form-group">
+               <div class="input-group">
+                   <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <i class="fa fa-user"></i>
+                </div>      
+                </div>
+                    <input type="text"
+                    class="form-control"
+                     name="username"
+                     id="username"
+                     ng-model="username"
+                     placeholder="Username"
+                     required
+                     minlength="4">
+               </div>
+                    <div style="color: red;"
+                    ng-if="form1.username.$touched && form1.username.$invalid">
+                <span ng-if="form1.username.$error.required">
+                    username is required
+                </span>
+                <span ng-if="form1.username.$error.minlength">
+                    minimum 4 chars required
+                </span>
+                </div>
+               </div> <br> <br>
+               <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+                        <input type="email"
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        ng-model="email"
+                        placeholder="email@gmail.com"
+                        required>
+
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <a href="#"> @gmail.com </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="color: red;"
+                    ng-if="form1.email.$touched && form1.email.$invalid">
+                <span ng-if="form1.email.$error.required">
+                    email is required
+                </span>
+                <span ng-if="form1.email.$error.email">
+                   enter valid email
+                </span>
+                </div>
+                    </div><br><br>
+                    <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        <input type="password"
+                        name="password"
+                        id="password"
+                        class="form-control"
+                        ng-model="password"
+                        pattern="(?=.*[A-Z])\w{4,15}"
+                        placeholder=" Password"
+                        required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <i class="fa fa-key"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="color: red;"
+                    ng-if="form1.password.$touched && form1.password.$invalid">
+                <span ng-if="form1.password.$error.required">
+                    password is required
+                </span>
+                <span ng-if="form1.password.$error.pattern">
+                    minimum 4-15 chars with atleast 1 uppercase is required
+                </span>
+                </div>
+                </div>
+      <br><br>
+      <div class="text-white">
+          <input type="checkbox"
+          name="check"
+          id="check"
+          ng-model="check"
+           > I've read and accept
+           <a href="#">Terms and conditions apply</a> 
+      </div><br><br>
+<div id="regis">    
+    <a href="../project1/register.html" type="button" class="btn btn-outline-warning" >Create Account?</a>
+</div>
+<div id="button">
+
+                    <button class="btn btn-lg btn-success"
+                     type="submit"
+                     data-target="#modal1"
+                     data-toggle="modal"
+                     ng-disabled="form1.$invalid"
+                     >Login</button>
+                    <button class="btn btn-lg btn btn-danger" type="reset">Cancel</button>
+                  
+          
+                         </div>
+           </form><br><br><br><br>
+       </div>
+       <div class="modal" id="modal1">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <div class="modal-title">
+                        <h6> Your Login Details </h6>
+                       </div>
+                       <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    </div>
+
+                       <div class="modal-body">
+                           <table class="table table-hover table-warning">
+                               <thead>
+                                <h4 align="center" class="text-success">You are successfully Login</h4>
+
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>Username</td>
+                                       <td> {{ username }} </td>
+                                   </tr>
+                                   <tr>
+                                       <td>
+                                           Email
+                                       </td>
+                                       <td> {{ email }} </td>
+                                   </tr>
+                                   <tr>
+                                       <td>Password</td>
+                                       <td> .......... </td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-danger" class="close" data-dismiss="modal">Close</button>
+                       </div>
+               </div>
+           </div>
+       </div>
+    </body>
+</html>

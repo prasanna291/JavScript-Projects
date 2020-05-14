@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> Register</title>
+      <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="/node_modules/angular/angular.min.js"></script>
+   <style>
+      .container-fluid{
+        background-image: url("../images/water1.jpeg");
+        background-size: cover;
+      }
+      
+       form{
+           width: 500px;
+           margin: 20px;
+           padding: 30px;
+           margin-left: 450px;
+           color: white;
+
+       }
+      .form .ng-invalid{
+           border: 1px solid red;
+           font-size: 10px;
+       }
+       .form.ng-valid{
+           border:2px solid green;
+       }
+       .form-control{
+           border-top :unset;
+           border-left:unset ;
+           border-right: unset;
+       }
+       .form-control:hover{
+           border-bottom: 1px solid blueviolet;
+       }
+       input.invalid{
+           border: 2px solid red;
+       }
+      #button{
+          margin-left: 220px;
+      }
+      #log{
+          font-size: 20px;
+          margin-bottom: -40px;
+      }
+      #data{
+          color: darkblue;
+          font-size: 20px;
+          margin-left: 150px;
+
+      }
+   </style>
+   <script>
+       var app=angular.module('myapp',[]);
+       app.controller('regctrl',function($scope){
+       })
+   </script>
+   
+    </head>
+    <body ng-app="myapp" ng-controller="regctrl">
+     <div class="container-fluid">
+         <form novalidate name="myform">
+             <br>
+             <h2 align="center">Register Form</h2><br><br>
+             <div class="form-group">
+                 <label for="firstname">FirstName:</label>
+                 <input type="text" 
+                 ng-model="firstname" 
+                 class="form-control"
+                  name="firstname"
+                  id="firstname"
+                  ng-minlength="4" 
+                  ng-maxlength="16"
+                  ng-required=" true">
+                  <div ng-if="myform.firstname.$touched && myform.firstname.$invalid"
+                   style="color: red;">
+                      <span ng-if="myform.firstname.$error.required">
+                          firstname is required</span>
+                      <span ng-if="myform.firstname.$error.minlength">
+                          please enter minimum 4 chars
+                      </span> 
+                      <span ng-if="myform.firstname.$error.maxlength">
+                          please don't exceed 16 chars
+                      </span>   
+                  </div>
+             </div>
+             <div class="form-group">
+                <label for="lastname">LastName:</label>
+                <input type="text"
+                 ng-model="lastname"
+                  class="form-control"
+                   name="lastname" 
+                   ng-required="true"
+                  ng-minlength="4"
+                   ng-maxlength="16">
+                   <div style="color: red;" 
+                   ng-if="myform.lastname.$touched && myform.lastname.$invalid">
+                       <span ng-if="myform.lastname.$error.required">
+                           LastName is required
+                       </span> 
+                       <span ng-if="myform.lastname.$error.minlength">
+                        please enter minimum 4 chars.
+                    </span>
+                    <span ng-if="myform.lastname.$error.maxlength">
+                        please don't exceed 16 chars.
+                    </span>
+                   </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" 
+                ng-model="email" 
+                name="email" 
+                class="form-control"
+                ng-required="true">
+                <div style="color: red;"
+                ng-if="myform.email.$touched && myform.email.$invalid"> 
+            
+            <span ng-if="myform.email.$error.required">
+                 Email is mandatory
+            </span>
+            <span ng-if="myform.email.$error.email">
+                invalid email
+            </span>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password"
+                 ng-model="password"
+                  name="password"
+                  class="form-control"
+                   ng-required="true"
+                   pattern="(?=.*[A-Z])\w{4,15}">
+                   <div style="color: red;"
+                ng-if="myform.password.$touched && myform.password.$invalid"> 
+            
+            <span ng-if="myform.password.$error.required">
+                password is mandatory
+            </span>
+            <span ng-if="myform.password.$error.pattern">
+                please enter minimum [4-15] chars with atleast 1 Uppercase
+            </span>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" 
+                class="form-control"
+                name="mobile"
+                id="mobile"
+                ng-model="mobile"
+                ng-required="true"
+                pattern="\+91[0-9]{10}">
+                <div style="color: red;"
+                ng-if="myform.mobile.$touched && myform.mobile.$invalid">
+                <span ng-if="myform.mobile.$error.required">
+                    Enter your mobile number</span>
+                 <span ng-if="myform.mobile.$error.pattern">
+                     Start with +91
+                 </span>   
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea rows="3" cols="30"
+                class="form-control"
+                name="address"
+                id="address"
+                ng-model="address"
+                ng-required="true">
+                </textarea>
+                <div style="color: red;"
+                ng-if="myform.address.$touched && myform.address.$invalid">
+                <span ng-if="myform.address.$error.required">
+                    please enter your current address
+                </span>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox"
+                ng-model="check"
+                name="check"
+                id="check"> I've read and apply for <a href="#">terms and conditions apply</a>
+            </div>
+<br>
+            </div>
+            <div id="log">
+                <a href="../project1/login.html" type="button" class="btn btn-outline-warning">Login</a> 
+            </div>
+         <div id="button">
+            <button class="btn btn-lg btn-success"
+            type="button"
+             data-toggle="modal"
+             data-target="#modal1"
+             ng-disabled="myform.$invalid"
+
+             >Register</button> 
+            <button class="btn btn-lg btn-danger "
+             type="reset" 
+             data-dismiss="form"
+              class="close">Close</button>
+              </div>
+            <br><br>
+            
+         </form>
+     </div>
+     <div class="modal" id="modal1">
+         <div class="modal-dialog modal-lg modal-dialog-scrollable">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <div class="modal-title">
+                      Details
+                </div>
+                <span id="data">You are successfully registered</span>
+
+                <button  type="button"
+                class="close"
+                 data-dismiss="modal">&times;</button>
+             </div>
+             <div class="modal-body">
+               
+                <table class="table table-hover table-success">
+                    <thead>
+                      Your Registration  Details
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FirstName</td>
+                            <td>{{ firstname }} </td>
+                        </tr>
+                        <tr>
+                            <td>LastName</td>
+                            <td> {{ lastname }} </td>
+                        </tr>
+                        <tr>
+                            <td>Email </td>
+                            <td> {{ email }} </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password
+                            </td>
+                            <td> {{password}}  </td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td> {{ mobile}} </td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td> {{address}} </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+             </div>
+             <div class="modal-footer">
+                 <a href="../project1/login.html" class="btn btn-outline-info" >
+                 Login
+                 </button>
+             </div>
+         </div>
+</div>
+     </div>
+    </body>
+</html>
